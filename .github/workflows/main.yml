@@ -6,6 +6,9 @@ on:
 
 jobs:
   build:
+    permissions:
+      contents: read
+      
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
@@ -15,3 +18,4 @@ jobs:
         with:
           node-version: v10
 
+permissions: {}

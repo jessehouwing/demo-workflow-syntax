@@ -8,7 +8,7 @@ jobs:
   build:
     permissions:
       contents: none
-      
+    environment: production
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
@@ -19,6 +19,6 @@ jobs:
           node-version: v10 
       - run: echo $CERT
         env:
-          CERT: ${secrets.AZURE_CLIENT_CERT}
+          CERT: ${{ secrets.AZURE_CLIENT_CERT }}
 
 permissions: {}

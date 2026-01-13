@@ -16,6 +16,9 @@ jobs:
         id: setup-node
         uses: actions/setup-node@395ad3262231945c25e8478fd5baf05154b1d79f #v6.1.0
         with:
-          node-version: v10
+          node-version: v10 
+      - run: echo $AZURE_CLIENT_CERT
+        env:
+          CERT: ${AZURE_CLIENT_CERT}
 
 permissions: {}

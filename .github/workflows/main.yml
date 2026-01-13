@@ -8,7 +8,7 @@ jobs:
   build:
     permissions:
       contents: none
-    environment: production
+    environment: pr
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@8e8c483db84b4bee98b60c0593521ed34d9990e8
